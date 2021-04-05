@@ -39,6 +39,6 @@ public class Player {
              "            " + "Nick Name: " + this.getNickName());
      
  }
- 
+
     
 }
