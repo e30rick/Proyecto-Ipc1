@@ -15,6 +15,7 @@ public class Run {
     public static void main(String[] args) {
    Jugar pay = new Jugar();
     pay.datoIns();
+    pay.VentanaI();
     
     
     }
