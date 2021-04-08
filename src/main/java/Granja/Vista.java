@@ -1,6 +1,7 @@
 
 package Granja;
 import datosJugador.Player;
+
 import java.awt.Color;
 
 import static java.awt.PageAttributes.ColorType.COLOR;
@@ -10,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 public class Vista extends JFrame{
-    Player pyp1;
+    
     
     //Ventana Principal 
     public Vista(){
@@ -27,7 +28,6 @@ public class Vista extends JFrame{
     }
     
     private void PanelPrincipal(){
-  
         JPanel pan1 = new JPanel(); //Creación de Panel principal
         pan1.setLayout(null); // diseño por defecto apahgado
         // agregar color al panel pan1.setBackground(Color.BLUE);
@@ -41,5 +41,6 @@ public class Vista extends JFrame{
         et1.setBackground(Color.BLUE); //color fondo
         et1.setBounds(5, 5, 100, 100);
         pan1.add(et1); //agregar la etiqueta
+              
     }
 }

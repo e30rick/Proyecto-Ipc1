@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package juego;
+import Granja.Pantalla1;
+
+
 
 
 
@@ -15,7 +18,15 @@ public class Run {
     public static void main(String[] args) {
    Jugar pay = new Jugar();
     pay.datoIns();
-    pay.VentanaI();
+   
+   new Pantalla1().setVisible(true);
+    
+      
+            
+
+
+    
+   
     
     
     }

@@ -1,24 +1,24 @@
 
 package juego;
 
-import datosJugador.Oro;
 import javax.swing.JOptionPane;
 import Granja.Vista;
+import datosJugador.Player;
+
 
 public class Jugar {
-    String  nombre1;
-    String nickName1;
-    Oro pu1;
+    static String  nombre1;
+    static String nickName1;
+    Player pu1;
     Vista Vp;
-    
+   
 //metodo para preguntar e imprimir los datos iniciales
 public void datoIns(){
 
 nombre1 = JOptionPane.showInputDialog("ingrese su nombre: ");
 nickName1 = JOptionPane.showInputDialog("ingrese su nickName: ");
-pu1 = new Oro(nombre1, nickName1, 100, 10);
-pu1.toString();
-
+pu1 = new Player(nombre1, nickName1);
+pu1.presentar();
 
 }
 
@@ -29,6 +29,12 @@ Vp.setVisible(true);
 
 }
 
+public void Contro(){
 
-    
+    System.out.println("nombre: " + this.pu1.getNombre());
+}
+
+
+
+
 }

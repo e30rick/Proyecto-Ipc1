@@ -9,10 +9,10 @@ package ActividadesFarm;
  *
  * @author e30ri
  */
-public abstract class SerVivo {
-    protected String especie;
-    protected Integer edad;
-    
+public class TipoSerVivo {
+    String Animal;
+    String Planta;
+    String serHumano;
     
     
 }
