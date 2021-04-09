@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package juego;
+package Manejadores;
 
-
-public class Run {
-
-    public static void main(String[] args) {
-   
-    Jugar cx = new Jugar();
-    cx.Iniciar();
-      
-        
-    
-    }
-   
+/**
+ *
+ * @author e30ri
+ */
+public class ManejadorPlayer {
     
 }

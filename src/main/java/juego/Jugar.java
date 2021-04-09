@@ -1,6 +1,8 @@
 
 package juego;
 
+import Granja.Login;
+import Granja.PantallaIniciar;
 import javax.swing.JOptionPane;
 import Granja.Vista;
 import datosJugador.Player;
@@ -11,7 +13,9 @@ public class Jugar {
     static String nickName1;
     Player pu1;
     Vista Vp;
-   
+    Login cx = new Login();
+    
+    PantallaIniciar in;
 //metodo para preguntar e imprimir los datos iniciales
 public void datoIns(){
 
@@ -32,6 +36,11 @@ Vp.setVisible(true);
 public void Contro(){
 
     System.out.println("nombre: " + this.pu1.getNombre());
+}
+
+public void Iniciar(){
+cx.setVisible(true);
+
 }
 
 
