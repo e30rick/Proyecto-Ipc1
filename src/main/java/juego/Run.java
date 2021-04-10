@@ -6,12 +6,15 @@
 package juego;
 
 
+
+
 public class Run {
 
     public static void main(String[] args) {
+      
+        Jugar tmp = new Jugar();
+        tmp.principal();
    
-    Jugar cx = new Jugar();
-    cx.Iniciar();
       
         
     

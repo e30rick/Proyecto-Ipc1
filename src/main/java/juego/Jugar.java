@@ -1,49 +1,22 @@
 
 package juego;
+import  Granja.Login;
+import Granja.Pantalla1;
 
-import Granja.Login;
-import Granja.PantallaIniciar;
-import javax.swing.JOptionPane;
-import Granja.Vista;
-import datosJugador.Player;
 
 
 public class Jugar {
-    static String  nombre1;
-    static String nickName1;
-    Player pu1;
-    Vista Vp;
-    Login cx = new Login();
+    Login ventaInicial;
     
-    PantallaIniciar in;
-//metodo para preguntar e imprimir los datos iniciales
-public void datoIns(){
-
-nombre1 = JOptionPane.showInputDialog("ingrese su nombre: ");
-nickName1 = JOptionPane.showInputDialog("ingrese su nickName: ");
-pu1 = new Player(nombre1, nickName1);
-pu1.presentar();
-
-}
-
-//meotodo para presentar la ventana
-public void VentanaI(){
-Vp = new Vista();
-Vp.setVisible(true);
-
-}
-
-public void Contro(){
-
-    System.out.println("nombre: " + this.pu1.getNombre());
-}
-
-public void Iniciar(){
-cx.setVisible(true);
-
+    
+    public void principal(){
+    Login vI = new Login();
+    vI.setVisible(true);
+    
+    }
+    
+    
 }
 
 
 
-
-}
