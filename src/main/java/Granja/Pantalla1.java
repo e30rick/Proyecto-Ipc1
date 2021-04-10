@@ -9,19 +9,13 @@ package Granja;
 import datosJugador.Player;
 import javax.swing.WindowConstants;
 
-/**
- *
- * @author e30ri
- */
-public class Pantalla1 extends javax.swing.JFrame {
 
-    /** Creates new form Pantalla1 */
+public class Pantalla1 extends javax.swing.JFrame {
+Player presente;
+   
     public Pantalla1() {
         initComponents();
-        Login login = new Login();
-        login.setVisible(false);
-        login.dispose();
-        Player presente;
+        
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 
@@ -31,13 +25,9 @@ public class Pantalla1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        InitFarm = new javax.swing.JButton();
+        NuevoAnim = new javax.swing.JButton();
+        NuevaPlant = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("My Farm IPC");
@@ -48,50 +38,36 @@ public class Pantalla1 extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 102));
 
-        jTextPane1.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentAdded(java.awt.event.ContainerEvent evt) {
-                jTextPane1ComponentAdded(evt);
-            }
-        });
-        jScrollPane1.setViewportView(jTextPane1);
-
-        jTextPane2.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentAdded(java.awt.event.ContainerEvent evt) {
-                jTextPane2ComponentAdded(evt);
-            }
-        });
-        jScrollPane2.setViewportView(jTextPane2);
-
-        jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("GENERAR GRANJA");
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        InitFarm.setBackground(new java.awt.Color(255, 0, 0));
+        InitFarm.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 36)); // NOI18N
+        InitFarm.setForeground(new java.awt.Color(255, 102, 102));
+        InitFarm.setText("¡GENERAR GRANJA!");
+        InitFarm.setContentAreaFilled(false);
+        InitFarm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                InitFarmActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(51, 0, 255));
-        jButton2.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(51, 0, 255));
-        jButton2.setText("Crear Nuevo Animal");
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        NuevoAnim.setBackground(new java.awt.Color(51, 0, 255));
+        NuevoAnim.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 24)); // NOI18N
+        NuevoAnim.setForeground(new java.awt.Color(51, 0, 255));
+        NuevoAnim.setText("Crear Nuevo Animal");
+        NuevoAnim.setContentAreaFilled(false);
+        NuevoAnim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                NuevoAnimActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 204));
-        jButton3.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 204));
-        jButton3.setText("Crear Nueva Planta");
-        jButton3.setContentAreaFilled(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        NuevaPlant.setBackground(new java.awt.Color(0, 0, 204));
+        NuevaPlant.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 24)); // NOI18N
+        NuevaPlant.setForeground(new java.awt.Color(0, 0, 204));
+        NuevaPlant.setText("Crear Nueva Planta");
+        NuevaPlant.setContentAreaFilled(false);
+        NuevaPlant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                NuevaPlantActionPerformed(evt);
             }
         });
 
@@ -100,37 +76,26 @@ public class Pantalla1 extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
-                            .addComponent(jScrollPane2)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(60, 60, 60)))
-                .addGap(0, 38, Short.MAX_VALUE))
+                .addGap(114, 114, 114)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(NuevaPlant, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NuevoAnim, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(63, Short.MAX_VALUE)
+                .addComponent(InitFarm, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55))
+                .addGap(80, 80, 80)
+                .addComponent(InitFarm, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(NuevoAnim, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(NuevaPlant, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -141,45 +106,31 @@ public class Pantalla1 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void NuevaPlantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevaPlantActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_NuevaPlantActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void NuevoAnimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoAnimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_NuevoAnimActionPerformed
 
-    private void jTextPane1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jTextPane1ComponentAdded
+    private void InitFarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InitFarmActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextPane1ComponentAdded
-
-    private void jTextPane2ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jTextPane2ComponentAdded
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextPane2ComponentAdded
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_InitFarmActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton InitFarm;
+    private javax.swing.JButton NuevaPlant;
+    private javax.swing.JButton NuevoAnim;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
     // End of variables declaration//GEN-END:variables
 
 }

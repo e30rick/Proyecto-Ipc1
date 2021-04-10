@@ -1,9 +1,9 @@
 
 package Granja;
 
-public class Pantalla2 extends javax.swing.JFrame {
+public class PantallaPrincipal extends javax.swing.JFrame {
 
-    public Pantalla2() {
+    public PantallaPrincipal() {
         initComponents();
     }
 
@@ -18,11 +18,11 @@ public class Pantalla2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
+            .addGap(0, 804, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addGap(0, 524, Short.MAX_VALUE)
         );
 
         pack();

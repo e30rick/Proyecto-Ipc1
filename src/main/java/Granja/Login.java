@@ -20,7 +20,6 @@ public class Login extends javax.swing.JFrame {
        person = new Player("", "");
        nombreField.setText(person.getNombre());
        nickField.setText(person.getNickName());
-       
        this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
        }
@@ -133,14 +132,13 @@ public class Login extends javax.swing.JFrame {
         String nombre = nombreField.getText();
         String nickName1 = nickField.getText();
         person = new Player(nombre, nickName1);
+        this.setVisible(false);
+        this.dispose(); //cerrar esta ventana
+        //invocanco a la otra ventana
         ManejadorPlayer v2 = new ManejadorPlayer();
         v2.mostrarPantalla();
         
-        Login v1 = new Login();
-        v1.setVisible(false);
-        v1.dispose();
-        
-       
+      
     }//GEN-LAST:event_JugarActionPerformed
 
     
