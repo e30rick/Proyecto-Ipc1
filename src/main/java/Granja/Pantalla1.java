@@ -6,6 +6,7 @@
 
 package Granja;
 
+import Manejadores.ManejadorPantalla1;
 import datosJugador.Player;
 import javax.swing.WindowConstants;
 
@@ -122,6 +123,10 @@ Player presente;
 
     private void InitFarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InitFarmActionPerformed
         // TODO add your handling code here:
+        ManejadorPantalla1 wind1 = new ManejadorPantalla1();
+        wind1.nextWIndow();
+        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_InitFarmActionPerformed
 
     
