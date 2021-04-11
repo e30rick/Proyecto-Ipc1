@@ -133,6 +133,7 @@ Player presente;
         // TODO add your handling code here:
         ManejadorPantalla1 wind1 = new ManejadorPantalla1();
         wind1.nextWIndow();
+        
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_InitFarmActionPerformed

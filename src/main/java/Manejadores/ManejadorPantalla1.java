@@ -28,8 +28,10 @@ public class ManejadorPantalla1 {
     
     }
     
-    public void windowCPlanta(){
-    
-    }
+   //metodo para crear la granja principal
+   public void generarCampo(){
+   
+   
+   }
     
 }
