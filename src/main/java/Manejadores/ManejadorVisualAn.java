@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Manejadores;
+import Granja.VisualAnimal;
 
 /**
  *
@@ -11,4 +12,14 @@ package Manejadores;
  */
 public class ManejadorVisualAn {
     
+    
+    public void windowOnA(){
+    
+        VisualAnimal vA = new VisualAnimal();
+        vA.setVisible(true);
+    }
+    
+    
+  
+   
 }

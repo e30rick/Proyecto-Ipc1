@@ -5,7 +5,8 @@
  */
 
 package Granja;
-
+import Manejadores.ManejadorVisualPlan;
+import Manejadores.ManejadorVisualAn;
 import Manejadores.ManejadorPantalla1;
 import datosJugador.Player;
 import javax.swing.WindowConstants;
@@ -16,7 +17,6 @@ Player presente;
    
     public Pantalla1() {
         initComponents();
-        
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 
@@ -43,6 +43,7 @@ Player presente;
         InitFarm.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 36)); // NOI18N
         InitFarm.setForeground(new java.awt.Color(255, 102, 102));
         InitFarm.setText("¡GENERAR GRANJA!");
+        InitFarm.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 0, 255)));
         InitFarm.setContentAreaFilled(false);
         InitFarm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +55,7 @@ Player presente;
         NuevoAnim.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 24)); // NOI18N
         NuevoAnim.setForeground(new java.awt.Color(51, 0, 255));
         NuevoAnim.setText("Crear Nuevo Animal");
+        NuevoAnim.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 102, 102)));
         NuevoAnim.setContentAreaFilled(false);
         NuevoAnim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +67,7 @@ Player presente;
         NuevaPlant.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 24)); // NOI18N
         NuevaPlant.setForeground(new java.awt.Color(0, 0, 204));
         NuevaPlant.setText("Crear Nueva Planta");
+        NuevaPlant.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 102, 102)));
         NuevaPlant.setContentAreaFilled(false);
         NuevaPlant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,22 +80,23 @@ Player presente;
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(NuevaPlant, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NuevoAnim, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
-                .addComponent(InitFarm, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(NuevaPlant, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
+                            .addComponent(NuevoAnim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(InitFarm, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(78, 78, 78)
                 .addComponent(InitFarm, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(28, 28, 28)
                 .addComponent(NuevoAnim, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(NuevaPlant, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -115,10 +119,14 @@ Player presente;
 
     private void NuevaPlantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevaPlantActionPerformed
         // TODO add your handling code here:
+        ManejadorVisualPlan cnp = new ManejadorVisualPlan();
+        cnp.windowOnP();
     }//GEN-LAST:event_NuevaPlantActionPerformed
 
     private void NuevoAnimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoAnimActionPerformed
         // TODO add your handling code here:
+        ManejadorVisualAn cna = new ManejadorVisualAn();
+        cna.windowOnA();
     }//GEN-LAST:event_NuevoAnimActionPerformed
 
     private void InitFarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InitFarmActionPerformed
