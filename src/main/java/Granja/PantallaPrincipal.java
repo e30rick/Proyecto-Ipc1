@@ -1,10 +1,30 @@
 
 package Granja;
 
-public class PantallaPrincipal extends javax.swing.JFrame {
+import GeneradorSuelos.AdminSuelos;
+import Manejadores.ManejadorVisualSuelo;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.LayoutManager;
+import javax.swing.WindowConstants;
 
-    public PantallaPrincipal() {
+public class PantallaPrincipal extends javax.swing.JFrame {
+ protected ManejadorVisualSuelo manejadorSuelo;
+ protected AdminSuelos AdminSuelos;
+ 
+ 
+ 
+    public PantallaPrincipal(int nCantidadCeldasX, int nCantidadCeldasY) {
         initComponents();
+        this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        this.terreno.setLayout(new GridLayout(nCantidadCeldasX, nCantidadCeldasY));
+        enviarDatos(nCantidadCeldasX, nCantidadCeldasY);
+    }
+    
+    public void enviarDatos(int CantidadX, int CantidadY){
+    this.AdminSuelos = new AdminSuelos(CantidadX, CantidadY);
+    manejadorSuelo = new ManejadorVisualSuelo(terreno, AdminSuelos.getSuelo(), CantidadX, CantidadY);
+    
     }
 
    
@@ -12,32 +32,37 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        terreno = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(102, 204, 0));
+        terreno.setBackground(new java.awt.Color(255, 204, 153));
+        terreno.setForeground(new java.awt.Color(255, 204, 153));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 827, Short.MAX_VALUE)
+        javax.swing.GroupLayout terrenoLayout = new javax.swing.GroupLayout(terreno);
+        terreno.setLayout(terrenoLayout);
+        terrenoLayout.setHorizontalGroup(
+            terrenoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 693, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 524, Short.MAX_VALUE)
+        terrenoLayout.setVerticalGroup(
+            terrenoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 412, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 77, Short.MAX_VALUE)
+                .addComponent(terreno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 112, Short.MAX_VALUE)
+                .addComponent(terreno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -45,6 +70,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel terreno;
     // End of variables declaration//GEN-END:variables
 }

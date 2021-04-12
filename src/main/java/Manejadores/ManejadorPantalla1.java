@@ -14,24 +14,21 @@ import Granja.VisualAnimal;
  */
 public class ManejadorPantalla1 {
    
-    
-    public void nextWIndow(){
-    
-    PantallaPrincipal vP = new PantallaPrincipal();
-    vP.setVisible(true);
-    }
-    
-    
+     
     public void windowCAnimal(){
     VisualAnimal crA =  new VisualAnimal();
     crA.setVisible(true);
     
     }
     
-   //metodo para crear la granja principal
-   public void generarCampo(){
-   
-   
-   }
     
+    public void granja(){
+        int filas = 5;
+        int columnas = 5;
+    PantallaPrincipal granjaFarm = new PantallaPrincipal(filas, columnas);
+    granjaFarm.setVisible(true);
+    
+    
+    }
+
 }

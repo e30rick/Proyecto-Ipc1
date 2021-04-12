@@ -131,8 +131,8 @@ Player presente;
 
     private void InitFarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InitFarmActionPerformed
         // TODO add your handling code here:
-        ManejadorPantalla1 wind1 = new ManejadorPantalla1();
-        wind1.nextWIndow();
+       ManejadorPantalla1 miGranja = new ManejadorPantalla1();
+       miGranja.granja();
         
         this.setVisible(false);
         this.dispose();

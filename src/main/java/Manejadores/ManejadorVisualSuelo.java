@@ -23,6 +23,7 @@ public class ManejadorVisualSuelo {
     this.distribucionSuelo = distribucionSuelo;
     this.nSueloX = nSueloX;
     this.nSueloY = nSueloY;
+       dibujarSuelo();
     }
     
     public void dibujarSuelo(){
