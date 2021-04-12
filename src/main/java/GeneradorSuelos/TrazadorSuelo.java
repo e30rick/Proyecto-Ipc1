@@ -1,6 +1,7 @@
 
 package GeneradorSuelos;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,9 +20,9 @@ public class TrazadorSuelo {
         for(int j = 0; j < CasillasY; j++){
         
            CreadorSuelos jLabel1 = new CreadorSuelos(i+1, j+1,"Fila:" + (i + 1) + " Columna:" + (j + 1) );
+           jLabel1.setOpaque(true);
+           jLabel1.setBackground(Color.BLUE);
            jLabel1.addMouseListener(new java.awt.event.MouseAdapter(){
-               
-           
            @Override
            public void mouseClicked(java.awt.event.MouseEvent evt){
            CreadorSuelos label=(CreadorSuelos)evt.getComponent();
