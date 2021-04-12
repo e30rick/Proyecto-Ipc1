@@ -16,6 +16,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
  
     public PantallaPrincipal(int nCantidadCeldasX, int nCantidadCeldasY) {
         initComponents();
+        this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         this.terreno.setLayout(new GridLayout(nCantidadCeldasX, nCantidadCeldasY));
         enviarDatos(nCantidadCeldasX, nCantidadCeldasY);

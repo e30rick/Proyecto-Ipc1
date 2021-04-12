@@ -8,6 +8,7 @@ public class VisualAnimal extends javax.swing.JFrame {
     
     public VisualAnimal() {
         initComponents();
+        this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 

@@ -17,6 +17,7 @@ Player presente;
    
     public Pantalla1() {
         initComponents();
+        this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 

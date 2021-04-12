@@ -7,6 +7,7 @@ public class VisualPlanta extends javax.swing.JFrame {
     
     public VisualPlanta() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
    
