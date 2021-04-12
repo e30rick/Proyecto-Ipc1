@@ -42,8 +42,5 @@ public class SueloIndicador {
         this.Comprado = Comprado;
     }
     
-    
-    
-    
-    
+     
 }

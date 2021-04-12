@@ -24,9 +24,4 @@ public class ManejadorPlayer {
      v2.setVisible(true); //mostrar siguiente ventana
      }
      
-
-    
-    
-    
-    
 }

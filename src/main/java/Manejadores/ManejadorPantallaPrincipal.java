@@ -4,11 +4,19 @@
  * and open the template in the editor.
  */
 package Manejadores;
-
+import Granja.Login;
 /**
  *
  * @author e30ri
  */
 public class ManejadorPantallaPrincipal {
+    
+    
+    public void mostrar(){
+    Login Datos = new Login();
+    
+    
+    }
+    
     
 }

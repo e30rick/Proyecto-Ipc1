@@ -23,7 +23,7 @@ public class ManejadorPantalla1 {
     
     
     public void granja(){
-        int filas = 5;
+        int  filas = 5;
         int columnas = 5;
     PantallaPrincipal granjaFarm = new PantallaPrincipal(filas, columnas);
     granjaFarm.setVisible(true);

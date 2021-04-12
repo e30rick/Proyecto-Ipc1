@@ -13,6 +13,7 @@ public class Login extends javax.swing.JFrame {
   
       protected Player person;
       private Pantalla1 segunda;
+     
     
       
    public Login(){
@@ -44,6 +45,7 @@ public class Login extends javax.swing.JFrame {
     public void setNombreField(JTextField nombreField) {
         this.nombreField = nombreField;
     }
+   
   
    
    
