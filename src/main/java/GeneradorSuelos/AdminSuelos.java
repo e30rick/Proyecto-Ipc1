@@ -12,6 +12,7 @@ package GeneradorSuelos;
 public class AdminSuelos {
     
     protected SueloIndicador[][] Suelo;
+   
     
     public AdminSuelos(int celdasX, int celdasY){
     

@@ -20,13 +20,21 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         this.terreno.setLayout(new GridLayout(nCantidadCeldasX, nCantidadCeldasY));
         enviarDatos(nCantidadCeldasX, nCantidadCeldasY);
+        pasto(nCantidadCeldasX, nCantidadCeldasY);
         
     }
+    
+    
     
     public void enviarDatos(int CantidadX, int CantidadY){
     this.AdminSuelos = new AdminSuelos(CantidadX, CantidadY);
     manejadorSuelo = new ManejadorVisualSuelo(terreno, AdminSuelos.getSuelo(), CantidadX, CantidadY);
     
+    }
+    
+    public void pasto(int CeldasX, int CeldasY){
+    this.AdminSuelos = new AdminSuelos(CeldasX, CeldasY);
+    manejadorSuelo = new ManejadorVisualSuelo(terreno, AdminSuelos.getSuelo(), CeldasX, CeldasY);
     }
       
     

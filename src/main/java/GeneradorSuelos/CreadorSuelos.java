@@ -65,6 +65,7 @@ public class CreadorSuelos extends JLabel{
         this.listenerList = listenerList;
     }
 
+    @Override
     public AccessibleContext getAccessibleContext() {
         return accessibleContext;
     }

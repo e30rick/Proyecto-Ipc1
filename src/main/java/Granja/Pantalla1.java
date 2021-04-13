@@ -134,7 +134,6 @@ Player presente;
         // TODO add your handling code here:
        ManejadorPantalla1 miGranja = new ManejadorPantalla1();
        miGranja.granja();
-        
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_InitFarmActionPerformed

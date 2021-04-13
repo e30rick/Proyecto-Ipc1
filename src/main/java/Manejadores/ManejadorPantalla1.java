@@ -7,6 +7,7 @@ package Manejadores;
 import Granja.Pantalla1; 
 import Granja.PantallaPrincipal;
 import Granja.VisualAnimal;
+import GeneradorSuelos.AdminSuelos;
 
 /**
  *
@@ -28,7 +29,6 @@ public class ManejadorPantalla1 {
     PantallaPrincipal granjaFarm = new PantallaPrincipal(filas, columnas);
     granjaFarm.setVisible(true);
     
-    
     }
-
+    
 }
