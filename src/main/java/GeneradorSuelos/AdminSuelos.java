@@ -17,7 +17,10 @@ public class AdminSuelos {
     public AdminSuelos(int celdasX, int celdasY){
     
     this.Suelo = TrazadorSuelo.creadorSueloIncial(celdasX, celdasY);
+    
+    
     }
+   
 
     public SueloIndicador[][] getSuelo() {
         return Suelo;

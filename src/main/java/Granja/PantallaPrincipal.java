@@ -20,7 +20,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         this.terreno.setLayout(new GridLayout(nCantidadCeldasX, nCantidadCeldasY));
         enviarDatos(nCantidadCeldasX, nCantidadCeldasY);
-        pasto(nCantidadCeldasX, nCantidadCeldasY);
+       
         
     }
     

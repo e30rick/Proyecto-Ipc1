@@ -69,10 +69,8 @@ public class TrazadorSuelo {
                 CreadorSuelos jLabel3 = new CreadorSuelos(i + 1, j + 1, "Esto es Desierto");
                 jLabel3.setOpaque(true);
                 jLabel3.setBackground(Color.orange);
-
                 celdasSueloDesierto = new SueloIndicador(EnumSuelos.DESIERTO, jLabel3, false);
                 suelo13[i][j] = celdasSueloDesierto;
-
             }
 
         }

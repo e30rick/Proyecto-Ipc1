@@ -8,6 +8,7 @@ import Granja.Pantalla1;
 import Granja.PantallaPrincipal;
 import Granja.VisualAnimal;
 import GeneradorSuelos.AdminSuelos;
+import java.awt.Color;
 
 /**
  *
@@ -28,7 +29,7 @@ public class ManejadorPantalla1 {
         int columnas = 5;
     PantallaPrincipal granjaFarm = new PantallaPrincipal(filas, columnas);
     granjaFarm.setVisible(true);
-    
+    granjaFarm.setBackground(Color.yellow);
     }
     
 }
