@@ -1,5 +1,5 @@
 
-package juego;
+package JuegoP;
 import  Granja.Login;
 import Granja.Pantalla1;
 

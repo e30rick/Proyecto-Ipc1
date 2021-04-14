@@ -7,7 +7,7 @@ package Manejadores;
 import Granja.Login;
 import Granja.Pantalla1;
 import datosJugador.Player;
-import juego.Jugar;
+import JuegoP.Jugar;
 
 /**
  *
